@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <div>
+        <h1>Task Tracker</h1>
+        <p class="subtitle">A tiny app to understand a GitHub-based project.</p>
+      </div>
+    </header>
+
+    <section class="card" aria-labelledby="new-task-heading">
+      <h2 id="new-task-heading">Add a task</h2>
+      <form id="task-form" class="task-form">
+        <label for="task-input" class="sr-only">Task name</label>
+        <input
+          id="task-input"
+          type="text"
+          placeholder="Enter a task"
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <section class="card" aria-labelledby="task-list-heading">
+      <div class="toolbar">
+        <h2 id="task-list-heading">Your tasks</h2>
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button type="button" class="filter-btn active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="active">Active</button>
+          <button type="button" class="filter-btn" data-filter="done">Done</button>
+        </div>
+      </div>
+
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+      <footer class="summary">
+        <span id="task-count">0 tasks</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
