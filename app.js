@@ -83,10 +83,10 @@ function editTask(taskId) {
 
   listItem.classList.add('editing');
 
-  const titleSpan = listItem.querySelector('.task-title');
+  const contentDiv = listItem.querySelector('.task-content');
   const actionsDiv = listItem.querySelector('.task-actions');
 
-  titleSpan.style.display = 'none';
+  contentDiv.style.display = 'none';
   actionsDiv.style.display = 'none';
 
   const editContainer = document.createElement('div');
