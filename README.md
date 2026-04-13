@@ -4,10 +4,13 @@ A tiny vanilla JavaScript task tracker app designed to help understand how a sim
 
 ## What this app does
 - Add a task
+- Edit a task inline (with Save / Cancel and keyboard shortcuts)
 - Mark a task as done
 - Delete a task
+- Clear all completed tasks at once
 - Filter tasks by all, active, or done
-- Show counts
+- Show counts (active / done / total)
+- **Task persistence** — tasks are saved to `localStorage` and survive page reloads
 
 ## Run locally
 Because this is a static app, you can run it in any of these simple ways:

@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Task Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -11,28 +17,28 @@
     <header class="app__header">
       <div>
         <h1>Task Tracker</h1>
-        <p class="subtitle">A tiny app to understand a GitHub-based project.</p>
+        <p class="subtitle">Organize your work. Stay on top of every task.</p>
       </div>
     </header>
 
     <section class="card" aria-labelledby="new-task-heading">
-      <h2 id="new-task-heading">Add a task</h2>
+      <h2 id="new-task-heading">New Task</h2>
       <form id="task-form" class="task-form">
         <label for="task-input" class="sr-only">Task name</label>
         <input
           id="task-input"
           type="text"
-          placeholder="Enter a task"
+          placeholder="What needs to be done?"
           autocomplete="off"
           required
         />
-        <button type="submit">Add</button>
+        <button type="submit">Add Task</button>
       </form>
     </section>
 
     <section class="card" aria-labelledby="task-list-heading">
       <div class="toolbar">
-        <h2 id="task-list-heading">Your tasks</h2>
+        <h2 id="task-list-heading">Your Tasks</h2>
         <div class="filters" role="group" aria-label="Filter tasks">
           <button type="button" class="filter-btn active" data-filter="all">All</button>
           <button type="button" class="filter-btn" data-filter="active">Active</button>
@@ -44,8 +50,13 @@
 
       <footer class="summary">
         <span id="task-count">0 tasks</span>
+        <button type="button" id="clear-done-btn" class="clear-done-btn" style="display:none;">Clear completed</button>
       </footer>
     </section>
+
+    <footer class="app__footer">
+      <p>Tasks are saved automatically in your browser.</p>
+    </footer>
   </main>
 
   <script src="app.js"></script>
